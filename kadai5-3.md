@@ -4,6 +4,8 @@
 * リクエストとレスポンスのフォーマット
 ### Q3-2. 各自で調査したAPIについて説明せよ。
 * APIの名称と参照URL
+* 気象庁API
+* https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json
 * エンドポイントと機能
 * リクエストとレスポンスのフォーマット
 ### Q3-3. 感想

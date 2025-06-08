@@ -1,15 +1,20 @@
 ## 外部APIの呼び出しのミニレポート
 ### Q3-1. 郵便番号APIについて説明せよ。
 * エンドポイントと機能
+* 【エンドポイント】 「https://zipcloud.ibsnet.co.jp/api/search」
+* 【機能】郵便番号を入力すると郵便番号に基づいた都道府県・市区町村・町名の住所情報を取得
 * リクエストとレスポンスのフォーマット
+* 【リクエスト】GETメソッドでzipcodeに検索したい郵便番号を指定
+* 【レスポンス】JSON形式で返答
+* 参考サイト 「https://zipcloud.ibsnet.co.jp/doc/api」
 ### Q3-2. 各自で調査したAPIについて説明せよ。
 * APIの名称と参照URL
-* 気象庁API（https://www.jma.go.jp/bosai/forecast/）
-* 気象庁API作成時の参考サイト（https://mindtech.jp/?p=1754）
+* 気象庁API 「https://www.jma.go.jp/bosai/forecast/」
+* 気象庁API作成時の参考サイト 「https://mindtech.jp/?p=1754」
 * エンドポイントと機能
-* 天気予報のエンドポイント https://www.jma.go.jp/bosai/forecast/data/forecast/{エリアコード}.json にエリアコードを入れると、その地域の天気情報を取得（areaCodeに入力された都道府県名に対応したareaCode(MapCodes)をエリアコードに代入）
+* 天気予報のエンドポイント 「https://www.jma.go.jp/bosai/forecast/data/forecast/{エリアコード}.json」 にエリアコードを入れると、その地域の天気情報を取得（areaCodeに入力された都道府県名に対応したareaCode(MapCodes)をエリアコードに代入）
 * リクエストとレスポンスのフォーマット
-* 【リクエスト】GETメソッドで「https://www.jma.go.jp/bosai/forecast/data/forecast/${areaCode}.json」のareaCodeに入力された都道府県名に対応したareaCode(MapCodes)を代入してデータを取得
+* 【リクエスト】GETメソッドで 「https://www.jma.go.jp/bosai/forecast/data/forecast/${areaCode}.json」 のareaCodeに入力された都道府県名に対応したareaCode(MapCodes)を代入してデータを取得
 * 【レスポンス】JSON形式で返答
 ### Q3-3. 感想
 * 今回の課題で苦労したこと

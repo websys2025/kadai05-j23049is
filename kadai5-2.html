@@ -33,10 +33,7 @@
         // 入力された都道府県コードを取得
         const location = myForm.form_data.value.trim();
         const areaCode = MapCodes[location];
-
-        // 画面の結果をリセット
-        document.getElementById("result").innerHTML = "";
-
+        
         if (!areaCode) {
             document.getElementById("result").innerHTML = "<p>対応していない都道府県です。</p>";
             return;

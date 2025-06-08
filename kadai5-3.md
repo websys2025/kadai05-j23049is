@@ -4,11 +4,17 @@
 * リクエストとレスポンスのフォーマット
 ### Q3-2. 各自で調査したAPIについて説明せよ。
 * APIの名称と参照URL
-* 気象庁API（https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json）
+* 気象庁API（https://www.jma.go.jp/bosai/forecast/）
 * 気象庁API作成時の参考サイト（https://mindtech.jp/?p=1754）
 * エンドポイントと機能
+* 天気予報のエンドポイント https://www.jma.go.jp/bosai/forecast/data/forecast/{エリアコード}.json にエリアコードを入れると、その地域の天気情報を取得（areaCodeに入力された都道府県名に対応したareaCode(MapCodes)をエリアコードに代入）
 * リクエストとレスポンスのフォーマット
+* 【リクエスト】GETメソッドで「https://www.jma.go.jp/bosai/forecast/data/forecast/${areaCode}.json」のareaCodeに入力された都道府県名に対応したareaCode(MapCodes)を代入してデータを取得
+* 【レスポンス】JSON形式で返答
 ### Q3-3. 感想
 * 今回の課題で苦労したこと
+* 天気予報APIを探したが、有料の物や海外製の物で精度が低かったり、気象庁の物も有料でこの無料で使えるタイプの気象庁APIにたどり着くまでに時間がかかり苦労した。
 * 演習を通して理解できたこと
 * Web APIの利便性や課題など
+* 【利便性】作成したフォームに調べたい物を入力すれば、わざわざサイトにアクセスしなくてもAPI機能でデータを取得してHTMLに出力できる
+* 【課題】APIの機能を利用するには有料の物もある・取得元によってはデータが全て配信されておらず、全てのデータを適切に取ってくることが出来ない（例：大阪だと、大阪の天気: くもり だけになる）

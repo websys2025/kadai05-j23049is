@@ -14,7 +14,15 @@
     <script>
         async function some_api(myForm) {
             // ここにコードを書く
-            document.getElementById("result").innerHTML += myForm.form_data.value+"<br />";
+            //document.getElementById("result").innerHTML += myForm.form_data.value+"<br />";
+            try {
+            const response = await fetch('https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json');
+            const data = await response.json();
+            const weatherInfo = data[0].timeSeries[0].areas[0].weathers[0]; // 東京の天気情報を取得
+            document.getElementById("result").innerHTML += `<p>東京の天気: ${weatherInfo}</p>`;
+            } catch (error) {
+            document.getElementById("result").innerHTML += "<p>天気情報の取得に失敗しました。</p>";
+            }
             document.apiform.reset();
         }
     </script>
